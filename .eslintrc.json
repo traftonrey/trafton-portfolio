@@ -1,0 +1,34 @@
+{
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:prettier/recommended",
+        "plugin:react-hooks/recommended"
+    ],
+    "plugins": [
+        "react",
+        "prettier",
+        "react-hooks"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": 2020,
+        "sourceType": "module",
+        "jsx": true
+    },
+    "env": {
+        "browser": true,
+        "node": true,
+        "es6": true
+    },
+    "rules": {
+        "react/prop-types": "off", // Disable prop-types since you're using TypeScript
+        "react/react-in-jsx-scope": "off", // Not needed with React 17+
+        "prettier/prettier": "error" // Make Prettier issues errors in the console
+    },
+    "settings": {
+        "react": {
+            "version": "detect" // Automatically detect the react version
+        }
+    }
+}

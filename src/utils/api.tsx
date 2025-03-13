@@ -1,7 +1,10 @@
 import axios from "axios";
 
-const API_EXPERIENCE = import.meta.env.VITE_API_EXPERIENCE;
-const API_PROJECTS = import.meta.env.VITE_API_PROJECTS;
+// const API_EXPERIENCE = import.meta.env.VITE_API_EXPERIENCE;
+// const API_PROJECTS = import.meta.env.VITE_API_PROJECTS;
+
+const API_EXPERIENCE = "https://wwtedi2wrk.execute-api.us-east-1.amazonaws.com/dev/experience"
+const API_PROJECTS = "https://wwtedi2wrk.execute-api.us-east-1.amazonaws.com/dev/projects"
 
 export const fetchExperience = async () => {
     try {

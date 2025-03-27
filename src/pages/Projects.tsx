@@ -67,7 +67,7 @@ const Projects = () => {
             <Navbar />
             <div className="w-full min-h-screen flex flex-col items-center pt-32 px-4 md:px-8 text-gray-100">
                 <motion.h1
-                    className="text-4xl md:text-5xl font-bold mb-12 bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent"
+                    className="text-4xl md:text-5xl font-bold mb-12 bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent leading-relaxed"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}

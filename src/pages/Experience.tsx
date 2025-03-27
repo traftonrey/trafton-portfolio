@@ -56,7 +56,7 @@ const Experience = () => {
         <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800">
             <Navbar />
             <div className="w-full min-h-screen flex flex-col items-center pt-10 px-4 md:px-10 text-gray-100">
-                <h1 className="pt-24 mb-12 font-bold text-4xl md:text-5xl bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+                <h1 className="pt-24 mb-12 font-bold text-4xl md:text-5xl bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent leading-relaxed">
                     Work Experience
                 </h1>
 

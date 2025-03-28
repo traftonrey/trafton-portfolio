@@ -13,7 +13,7 @@ const Navbar = () => {
                 <div className="flex space-x-6">
                     <Link
                         to="/"
-                        className="hover:text-purple-400 transition-colors duration-300"
+                        className="hover:text-emerald-500 transition-colors duration-300"
                     >
                         Home
                     </Link>

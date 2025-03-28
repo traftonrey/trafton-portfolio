@@ -1,14 +1,14 @@
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import { FaAws, FaMicrosoft, FaJava, FaChartBar } from "react-icons/fa";
 import { SiDatabricks } from "react-icons/si";
+import Footer from "../components/Footer";
 
 const Home = () => (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800">
         <Navbar />
-        <div className="w-full min-h-screen flex flex-col items-center pt-32 px-4 md:px-8 text-gray-100">
+        <div className="w-full min-h-screen flex flex-col items-center justify-center px-4 md:px-8 text-gray-100">
             {/* Hero Section */}
             <motion.div
                 className="text-center"
@@ -216,7 +216,6 @@ const Home = () => (
                 </div>
             </motion.div>
         </div >
-        <div className="p-6"></div>
         <Footer />
     </div >
 );

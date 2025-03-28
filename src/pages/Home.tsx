@@ -8,7 +8,7 @@ import Footer from "../components/Footer";
 const Home = () => (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800">
         <Navbar />
-        <div className="w-full min-h-screen flex flex-col items-center justify-center px-4 md:px-8 text-gray-100">
+        <div className="w-full min-h-screen flex flex-col items-center justify-center px-4 md:px-8 py-24 text-gray-100">
             {/* Hero Section */}
             <motion.div
                 className="text-center"
@@ -41,10 +41,10 @@ const Home = () => (
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5 }}
             >
-                <h2 className="text-2xl font-bold text-indigo-400 mb-6 px-4">
+                <h2 className="text-2xl font-bold text-indigo-400 mb-6">
                     Certifications & Accreditations
                 </h2>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-4 px-4">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                     <div className="p-4 bg-gray-800/50 rounded-lg border border-indigo-500/20 hover:border-emerald-500/40 transition-colors">
                         <a href="https://www.credly.com/badges/a4902e0f-e392-49ec-98f9-ddbb191b7a35/public_url" target="_blank" rel="noopener noreferrer">
                             <FaAws className="text-2xl text-orange-400 mb-2" />

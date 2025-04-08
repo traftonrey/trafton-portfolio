@@ -25,7 +25,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
-# Resume
-*.pdf
-*.docx

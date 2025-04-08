@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import Navbar from "../components/Navbar";
-import { FaAws, FaMicrosoft, FaJava, FaChartBar } from "react-icons/fa";
+import { FaAws, FaMicrosoft, FaJava, FaChartBar, FaDownload, FaFilePdf } from "react-icons/fa";
 import { SiDatabricks } from "react-icons/si";
+import resume from "../assets/Trafton Reynolds SWE.pdf";
 import Footer from "../components/Footer";
 
 const Home = () => (
@@ -34,6 +35,32 @@ const Home = () => (
                             repeat={Infinity}
                         />
                     </div>
+
+                    {/* Resume Download Section */}
+                    <motion.div
+                        className="flex justify-center gap-4 mt-8"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 0.5 }}
+                    >
+                        <a
+                            href={resume}
+                            download
+                            className="flex items-center gap-2 px-6 py-3 bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 rounded-lg transition-colors"
+                        >
+                            <FaDownload className="text-lg" />
+                            Download Resume
+                        </a>
+                        <a
+                            href={resume}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 px-6 py-3 bg-indigo-500/20 hover:bg-indigo-500/30 text-indigo-300 rounded-lg transition-colors"
+                        >
+                            <FaFilePdf className="text-lg" />
+                            View Online
+                        </a>
+                    </motion.div>
                 </motion.div>
 
                 {/* Certifications Section */}

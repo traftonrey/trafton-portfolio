@@ -3,4 +3,4 @@ Allow: /
 Disallow: /private/
 Disallow: /temp/
 
-Sitemap: http://trafton-portfolio.s3-website-us-east-1.amazonaws.com/sitemap.xml
+Sitemap: https://traftonreynolds.com/sitemap.xml

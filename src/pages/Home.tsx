@@ -19,7 +19,7 @@ const Home = () => (
                     transition={{ duration: 0.8 }}
                     style={{ marginTop: "6rem" }}
                 >
-                    <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-emerald-500 to-indigo-400 bg-clip-text text-transparent leading-relaxed">
+                    <h1 className="text-4xl md:text-6xl font-semibold bg-gradient-to-r from-emerald-500 to-indigo-400 bg-clip-text text-transparent leading-relaxed">
                         Trafton Reynolds
                     </h1>
                     <div className="text-2xl md:text-3xl text-gray-300">

@@ -4,68 +4,87 @@ import Navbar from "../components/Navbar";
 import { FaAws, FaMicrosoft, FaJava, FaChartBar, FaDownload, FaFilePdf } from "react-icons/fa";
 import { SiDatabricks } from "react-icons/si";
 import resume from "../assets/Trafton Reynolds SWE.pdf";
+import pfp from "../assets/linkedin-pfp.jpg";
 import Footer from "../components/Footer";
 
 const Home = () => (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-900 to-gray-800">
         <Navbar />
+
         <main className="flex-grow w-full flex flex-col justify-center min-h-[calc(100vh-12rem)] overflow-auto">
             <div className="max-w-6xl mx-auto px-4 md:px-8 py-16 w-full text-gray-100">
                 {/* Hero Section */}
                 <motion.div
-                    className="text-center"
+                    className="flex flex-col md:flex-row items-center py-16 sm:py-16 md:py-24 gap-8 md:gap-12 text-center md:text-left "
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
-                    style={{ marginTop: "6rem" }}
                 >
-                    <h1 className="text-4xl md:text-6xl font-semibold bg-gradient-to-r from-emerald-500 to-indigo-400 bg-clip-text text-transparent leading-relaxed">
-                        Trafton Reynolds
-                    </h1>
-                    <div className="text-2xl md:text-3xl text-gray-300">
-                        <TypeAnimation
-                            sequence={[
-                                'Full-Stack Developer',
-                                2000,
-                                'Data Engineer',
-                                2000,
-                                'AI & Data Innovator',
-                                2000
-                            ]}
-                            repeat={Infinity}
-                        />
-                    </div>
-
-                    {/* Resume Download Section */}
+                    {/* Profile Pic */}
                     <motion.div
-                        className="flex justify-center gap-4 mt-8"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 0.5 }}
+                        className="relative w-48 h-48 md:w-56 md:h-56 cursor-pointer rounded-full border-4 border-emerald-500/30 hover:border-emerald-500/50 transition-all overflow-hidden shadow-xl"
+                        whileHover={{ scale: 1.05 }}
                     >
-                        <a
-                            href={resume}
-                            download
-                            className="flex items-center gap-2 px-6 py-3 bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 rounded-lg transition-colors"
-                        >
-                            <FaDownload className="text-lg" />
-                            Download Resume
-                        </a>
-                        <a
-                            href={resume}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-2 px-6 py-3 bg-indigo-500/20 hover:bg-indigo-500/30 text-indigo-300 rounded-lg transition-colors"
-                        >
-                            <FaFilePdf className="text-lg" />
-                            View Online
+                        <a href="https://www.linkedin.com/in/traftonreynolds/" target="_blank" rel="noopener noreferrer">
+                            <img
+                                src={pfp}
+                                alt="Trafton Reynolds professional portrait"
+                                className="w-full h-full object-cover"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/30" />
                         </a>
                     </motion.div>
+
+                    {/* Name & Title */}
+
+                    <div className="flex-1">
+                        <h1 className="text-4xl md:text-6xl font-semibold bg-gradient-to-r from-emerald-500 to-indigo-400 bg-clip-text text-transparent leading-relaxed">
+                            Trafton Reynolds
+                        </h1>
+                        <div className="text-2xl md:text-3xl text-gray-300 mt-2">
+                            <TypeAnimation
+                                sequence={[
+                                    'Full-Stack Developer',
+                                    2000,
+                                    'Data Engineer',
+                                    2000,
+                                    'AI & Data Innovator',
+                                    2000
+                                ]}
+                                repeat={Infinity}
+                            />
+                        </div>
+
+                        {/* Resume Download */}
+                        <motion.div
+                            className="flex justify-center md:justify-start gap-4 mt-8"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ delay: 0.5 }}
+                        >
+                            <a
+                                href={resume}
+                                download
+                                className="flex items-center gap-2 px-6 py-3 bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 rounded-lg transition-colors"
+                            >
+                                <FaDownload className="text-lg" />
+                                Download Resume
+                            </a>
+                            <a
+                                href={resume}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-2 px-6 py-3 bg-indigo-500/20 hover:bg-indigo-500/30 text-indigo-300 rounded-lg transition-colors"
+                            >
+                                <FaFilePdf className="text-lg" />
+                                View Online
+                            </a>
+                        </motion.div>
+                    </div>
                 </motion.div>
 
-                {/* Certifications Section */}
+                {/* Certs */}
                 <motion.div
-                    className="mt-12"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.5 }}

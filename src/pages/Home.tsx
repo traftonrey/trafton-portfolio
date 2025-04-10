@@ -49,8 +49,12 @@ const Home = () => (
                                     2000,
                                     'Data Engineer',
                                     2000,
+                                    'Cloud Enthusiast',
+                                    2000,
                                     'AI & Data Innovator',
-                                    2000
+                                    2000,
+                                    'Lifelong Learner',
+                                    2000,
                                 ]}
                                 repeat={Infinity}
                             />

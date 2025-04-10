@@ -28,7 +28,6 @@ const Home = () => (
                         <a href="https://www.linkedin.com/in/traftonreynolds/" target="_blank" rel="noopener noreferrer">
                             <img
                                 src={pfp}
-                                loading="lazy"
                                 alt="Trafton Reynolds professional portrait"
                                 className="w-full h-full object-cover"
                             />

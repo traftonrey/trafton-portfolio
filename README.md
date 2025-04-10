@@ -1,54 +1,43 @@
-# React + TypeScript + Vite
+# Trafton Reynolds - Software Engineer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Professional portfolio showcasing full-stack development expertise and cloud engineering capabilities.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Responsive Design**: Optimized for all screen sizes
+- **Interactive Animations**: Smooth transitions with Framer Motion
+- **Dynamic Content**: 
+  - Project showcases with technical details
+  - Certification displays with validation links
+- **Performance Optimized**:
+  - Code splitting and lazy loading
+  - CI/CD pipeline integration
+- **SEO Friendly**:
+  - Meta tags and structured data
+  - XML sitemap and robots.txt
+  - Accessible navigation
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+**Frontend**
+- React + Vite
+- TypeScript
+- Tailwind CSS
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+**Backend & Infrastructure**
+- AWS S3 (Hosting)
+- AWS DynamoDB (Data Storage)
+- AWS Lambda + API Gateway (REST API)
+- AWS CloudFront (CDN)
+- Route 53 (Domain Management)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+**Development Tools**
+- GitHub Actions, AWS CodePipeline/CodeBuild/CodeDeploy (CI/CD)
+- ESLint + Prettier
+- Vitest (Testing)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Contact
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+Trafton Reynolds - [LinkedIn](https://www.linkedin.com/in/traftonreynolds/) - reynoldstrafton@gmail.com
+
+Project Link: https://traftonreynolds.com/

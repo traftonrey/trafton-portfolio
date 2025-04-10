@@ -3,20 +3,33 @@ import { Link } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import logo from '../assets/Tlogo500x500.png';
 
-const NavLink = ({ to, text, color }: { to: string; text: string; color: string }) => (
+// Color mapping for both desktop and mobile
+const colorClasses = {
+    emerald: 'hover:text-emerald-400',
+    blue: 'hover:text-blue-400',
+    amber: 'hover:text-amber-400',
+    green: 'hover:text-green-400'
+};
+
+const NavLink = ({ to, text, color }: { to: string; text: string; color: keyof typeof colorClasses }) => (
     <Link
         to={to}
-        className={`hover:text-${color}-400 transition-colors duration-300 px-3 py-1 rounded-lg`}
+        className={`${colorClasses[color]} transition-colors duration-300 px-3 py-1 rounded-lg`}
     >
         {text}
     </Link>
 );
 
-const MobileNavLink = ({ to, text, color, onClick }: { to: string; text: string; color: string; onClick: () => void }) => (
+const MobileNavLink = ({ to, text, color, onClick }: {
+    to: string;
+    text: string;
+    color: keyof typeof colorClasses;
+    onClick: () => void
+}) => (
     <Link
         to={to}
         onClick={onClick}
-        className={`w-3/4 hover:text-${color}-400 text-center py-3 px-6 hover:bg-gray-700/50 transition-colors rounded-lg text-lg`}
+        className={`${colorClasses[color]} w-3/4 text-center py-3 px-6 hover:bg-gray-700/50 transition-colors rounded-lg text-lg`}
     >
         {text}
     </Link>
@@ -29,7 +42,12 @@ const Navbar = () => {
         <nav className="fixed top-0 left-0 w-full bg-gray-800/50 backdrop-blur-lg text-white py-3 px-4 md:px-8 shadow-xl z-50 border-b border-white/20">
             <div className="flex justify-between items-center">
                 <Link to="/" className='flex items-center'>
-                    <img src={logo} className='h-8 lg:h-14 md:h-12 md:py-1 transition-all duration-300' alt='Trafton Reynolds' />
+                    <img
+                        src={logo}
+                        className='h-8 lg:h-14 md:h-12 md:py-1 transition-all duration-300'
+                        loading="lazy"
+                        alt='Trafton Reynolds'
+                    />
                 </Link>
 
                 {/* Desktop Navigation */}
@@ -56,8 +74,7 @@ const Navbar = () => {
             </div>
 
             {/* Mobile Navigation */}
-            <div className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-                }`}>
+            <div className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
                 <div className="flex flex-col items-center py-4 space-y-4 bg-gray-800/50 backdrop-blur-lg border-t border-white/20">
                     <MobileNavLink to="/" text="Home" color="emerald" onClick={() => setIsOpen(false)} />
                     <MobileNavLink to="/experience" text="Experience" color="blue" onClick={() => setIsOpen(false)} />

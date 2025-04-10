@@ -80,13 +80,14 @@ const About = () => {
                         animate={{ opacity: 1, y: 0 }}
                         className="text-center mb-16"
                     >
-                        <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-emerald-500 to-indigo-400 bg-clip-text text-transparent mb-6 md:leading-normal">
+                        <h1 className="text-4xl md:text-5xl font-semibold bg-gradient-to-r from-emerald-500 to-indigo-400 bg-clip-text text-transparent mb-6 md:leading-relaxed py-2">
                             Trafton Reynolds
                         </h1>
                         <div className="grid md:grid-cols-2 gap-10 items-center">
                             <div className="relative group">
                                 <img
                                     src={famPic}
+                                    loading="lazy"
                                     alt="Celebrating UNCW graduation with family"
                                     className="rounded-xl md:w-full md:object-cover md:object-center aspect-auto md:h-150"
                                 />
@@ -130,6 +131,7 @@ const About = () => {
                                     <div className="col-span-2 relative group">
                                         <img
                                             src={fishingPic}
+                                            loading="lazy"
                                             alt="Fishing trip on the Outer Banks"
                                             className={`rounded-lg w-full md:h-75 lg:h-96 object-cover aspect-auto transition-all duration-300 ${showFishingImage ? 'blur-none' : 'blur-sm bg-gray-900/50'}`}
                                         />
